@@ -1,0 +1,204 @@
+﻿<Page x:Class="Librarium.Pages.ReaderList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Librarium.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="945" d:DesignWidth="590"
+      Title="ReaderList">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.8*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        
+        
+        <ListView x:Name="listRead" 
+                  Grid.Row="1" Background="#FF3D1618" Opacity="0.85" Foreground="White"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            
+            <!--<ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" Width="Auto" DisplayMemberBinding="{Binding ID}"/>
+                    <GridViewColumn Header="Фамилия" Width="Auto" DisplayMemberBinding="{Binding LastName}"/>
+                    <GridViewColumn Header="Имя" Width="Auto" DisplayMemberBinding="{Binding FirstName}"/>
+                    <GridViewColumn Header="Телефон" Width="Auto" DisplayMemberBinding="{Binding Phone}"/>
+                    <GridViewColumn Header="Email" Width="170" DisplayMemberBinding="{Binding Email}"/>
+                    <GridViewColumn Header="Адрес" Width="Auto" DisplayMemberBinding="{Binding Address}"/>
+                    <GridViewColumn Header="Пол" Width="Auto" DisplayMemberBinding="{Binding Gender.NameGender}"/>
+                </GridView>
+                                                /Librarium;component/ImagesResourses/ki.png
+                                                /../ImagesResourses/ki.png
+            </ListView.View>-->
+
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+            
+                    <Border Background="#FF863B3F"
+                            Height="120"
+                            Width="270"
+                            Margin="0"
+                            BorderThickness="1"
+                            CornerRadius="4">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="1*"/>
+                            </Grid.RowDefinitions>
+
+                            <Image x:Name="photoUser"
+                              Margin="5" 
+                              Grid.RowSpan="4">
+                                <Image.Source>
+                                    <Binding Path ="Photo">
+                                        <Binding.TargetNullValue>
+                                            <ImageSource>
+                                                ../ImagesResourses/ki.png
+                                            </ImageSource>
+                                        </Binding.TargetNullValue>
+                                    </Binding>
+                                </Image.Source>
+                            </Image>
+
+                            <TextBlock Text="ID"
+                                   Grid.Column="1"
+                                   Grid.Row="0"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Center"
+                                   Margin="0 0 5 0"/>
+
+                            <TextBlock Text="Фамилия"
+                                   Grid.Column="1"
+                                   Grid.Row="1"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Center"
+                                   Margin="0 0 5 0"/>
+
+                            <TextBlock Text="Имя"
+                                   Grid.Column="1"
+                                   Grid.Row="2"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Center"
+                                   Margin="0 0 5 0"/>
+                    
+                            <TextBlock Text="Телефон"
+                                   Grid.Column="1"
+                                   Grid.Row="3"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Center"
+                                   Margin="0 0 5 0"/>
+                    
+                            <TextBlock Text="Email"
+                                   Grid.Column="1"
+                                   Grid.Row="4"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Center"
+                                   Margin="0 0 5 0"/>
+                    
+                            <TextBlock Text="Адрес"
+                                   Grid.Column="1"
+                                   Grid.Row="5"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Center"
+                                   Margin="0 0 5 0"/>
+                    
+                            <TextBlock Text="Пол"
+                                   Grid.Column="1"
+                                   Grid.Row="6"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Center"
+                                   Margin="0 0 5 0"/>
+
+                            <TextBlock Text="{Binding Path=ID}"
+                               Grid.Column="2"
+                               Grid.Row="0"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               Margin="10 0 0 0"/>
+
+                            <TextBlock Text="{Binding Path=LastName}"
+                               Grid.Column="2"
+                               Grid.Row="1"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               Margin="10 0 0 0"/>
+
+                            <TextBlock Text="{Binding Path=FirstName}"
+                               Grid.Column="2"
+                               Grid.Row="2"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               Margin="10 0 0 0"/>
+
+                            <TextBlock Text="{Binding Path=Phone}"
+                               Grid.Column="2"
+                               Grid.Row="3"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               Margin="10 0 0 0"/>
+
+                            <TextBlock Text="{Binding Path=Email}"
+                               Grid.Column="2"
+                               Grid.Row="4"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               Margin="10 0 0 0"/>
+
+                            <TextBlock Text="{Binding Path=Address}"
+                               Grid.Column="2"
+                               Grid.Row="5"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               Margin="10 0 0 0"/>
+
+                            <TextBlock Text="{Binding Path=Gender.NameGender}"
+                               Grid.Column="2"
+                               Grid.Row="6"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               Margin="10 0 0 0"/>
+
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+
+        <WrapPanel Grid.Row="0" VerticalAlignment="Top" Height="60" Background="#FF3D1618" Opacity="0.85" Margin="0 5 0 0">
+            <Label Content="Search" FontSize="20" Foreground="White" BorderBrush="LightGray" Background="#FF3D1618" Margin="0 15 0 0" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtSearch" Width="100" Height="30" Margin="0 15 0 0" TextChanged="txtSearch_TextChanged"/>
+            <ComboBox x:Name="comboBox"
+                Width="100" Height="30" Margin="10 15 10 0" SelectionChanged="ComboBox_SelectionChanged"/>
+
+            <Button x:Name="Add" Content="Add" Width="60" Height="30" Margin="10 15 0 0"  Foreground="White" Background="{x:Null}" BorderBrush="White"
+                    Click="Add_Click"/>
+            <Button x:Name="Remove" Content="Remove" Width="60" Height="30" Margin="10 15 0 0"  Foreground="White" Background="{x:Null}" BorderBrush="White"
+                    Click="Remove_Click"/>
+            <Button x:Name="Change" Content="Change" Width="60" Height="30" Margin="10 15 0 0"  Foreground="White" Background="{x:Null}" BorderBrush="White"
+                    Click="Change_Click"/>
+
+        </WrapPanel>
+
+    </Grid>
+</Page>

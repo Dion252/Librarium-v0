@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9abf202e00c74763820e9531e079c881" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="DB_For_LibrariumModel.Author" Width="1.5" PointX="0.75" PointY="3.5" />
+        <EntityTypeShape EntityType="DB_For_LibrariumModel.Book" Width="1.5" PointX="3" PointY="3.125" />
+        <EntityTypeShape EntityType="DB_For_LibrariumModel.BookRental" Width="1.5" PointX="5.25" PointY="3.125" />
+        <EntityTypeShape EntityType="DB_For_LibrariumModel.Employee" Width="1.5" PointX="3" PointY="11.875" />
+        <EntityTypeShape EntityType="DB_For_LibrariumModel.Gender" Width="1.5" PointX="0.75" PointY="8.875" />
+        <EntityTypeShape EntityType="DB_For_LibrariumModel.Genre" Width="1.5" PointX="5.25" PointY="7.5" />
+        <EntityTypeShape EntityType="DB_For_LibrariumModel.PublishHouse" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_For_LibrariumModel.Reader" Width="1.5" PointX="3" PointY="8.25" />
+        <EntityTypeShape EntityType="DB_For_LibrariumModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="1.625" />
+        <AssociationConnector Association="DB_For_LibrariumModel.FK_Book_Author" />
+        <AssociationConnector Association="DB_For_LibrariumModel.FK_Book_PublishHouse" />
+        <AssociationConnector Association="DB_For_LibrariumModel.FK_BookRental_Book" />
+        <AssociationConnector Association="DB_For_LibrariumModel.FK_BookRental_Emplovee" />
+        <AssociationConnector Association="DB_For_LibrariumModel.FK_BookRental_Reader" />
+        <AssociationConnector Association="DB_For_LibrariumModel.FK_Reader_Gender" />
+        <AssociationConnector Association="DB_For_LibrariumModel.BookAndGenre" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

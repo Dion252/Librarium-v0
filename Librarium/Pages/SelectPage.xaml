@@ -1,0 +1,69 @@
+﻿<Page x:Class="Librarium.Pages.SelectPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Librarium.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1000" d:DesignWidth="772"
+      Title="SelectPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="170"/>
+         
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.ColumnSpan="4" Background="#FF3F080B"/>
+        <TextBlock Grid.ColumnSpan="4" Text="Choose your action" 
+                   HorizontalAlignment="Right" VerticalAlignment="Center" 
+                   FontSize="44" Margin="0,0,10,0" Foreground="#FFA65237" FontWeight="Bold"/>
+
+        <Frame x:Name="SecondFrame" Grid.Column="0" Grid.Row="1" />
+
+        <Border Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                Width="170" Height="940" Background="#FF3D1618" Opacity="0.85" Margin="0 5 0 0">
+
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                Width="170" Height="940" Margin="0 5 0 0">
+
+            <Grid>
+               
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                </Grid.RowDefinitions>
+
+                <Button x:Name="btn1" Grid.Row="1" Grid.Column="1" FontSize="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                    Content="Books List" BorderBrush="LightGray" Background="#FF863B3F" BorderThickness="2" Foreground="White"
+                    HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Light"
+                    Margin="0 0 0 0" Width="155" Height="55" Click="btn1_Click"/>
+                <Button x:Name="btn2" Grid.Row="2" Grid.Column="1" FontSize="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                    Content="Reader List" BorderBrush="LightGray" Background="#FF863B3F" BorderThickness="2" Foreground="White"
+                    HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Light"
+                    Margin="0 0 0 0" Width="155" Height="55" Click="btn2_Click"/>
+                <Button x:Name="btn3" Grid.Row="3" Grid.Column="1" FontSize="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                    Content="Deliver List" BorderBrush="LightGray" Background="#FF863B3F" BorderThickness="2" Foreground="White"
+                    HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Light"
+                    Margin="0 0 0 0" Width="155" Height="55" Click="btn3_Click"/>
+
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

@@ -1,0 +1,210 @@
+﻿<Window x:Class="Librarium.Windows.ChangeReaderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Librarium.Windows"
+        mc:Ignorable="d"
+        Title="ChangeReaderWindow" Height="500" Width="400">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        
+        
+        <Border Background="#FF3D1618" BorderThickness="1" Grid.ColumnSpan="3" Grid.RowSpan="9"/>
+
+        <Border Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"
+                Margin="0 10 10 0" Width="90" Height="90" Background="#FFA65237"
+                BorderThickness="1" BorderBrush="#FFA65237" CornerRadius="0" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <Image x:Name="imgUser" />
+        </Border>
+
+        <TextBlock Text="Добавить читающего"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="28"
+                   FontWeight="DemiBold"
+                   Foreground="#FFA65237"
+                   Grid.ColumnSpan="3"/>
+
+
+        <TextBlock Text="Фамилия"
+                   HorizontalAlignment="Right"
+                   Margin="0 0 10 0"
+                   FontSize="10"
+                   FontWeight="Normal"
+                   FontStretch="Normal"
+                   Foreground="#FFA65237"
+                   Grid.Row="1"
+                   VerticalAlignment="Center"/>
+
+        <TextBlock Text="Имя"
+                   HorizontalAlignment="Right"
+                   Margin="0 0 10 0"
+                   FontSize="10"
+                   FontFamily="Helvetica"
+                   FontStyle="Normal"
+                   FontWeight="Normal"
+                   FontStretch="Normal"
+                   Foreground="#FFA65237"
+                   Grid.Row="2"
+                   VerticalAlignment="Center"/>
+
+        <TextBlock Text="Телефон"
+                   HorizontalAlignment="Right"
+                   Margin="0 0 10 0"
+                   FontSize="10"
+                   FontFamily="Helvetica"
+                   FontStyle="Normal"
+                   FontWeight="Normal"
+                   FontStretch="Normal"
+                   Foreground="#FFA65237"
+                   Grid.Row="3"
+                   VerticalAlignment="Center"/>
+
+        <TextBlock Text="Email"
+                   HorizontalAlignment="Right"
+                   Margin="0 0 10 0"
+                   FontSize="10"
+                   FontFamily="Helvetica"
+                   FontStyle="Normal"
+                   FontWeight="Normal"
+                   FontStretch="Normal"
+                   Foreground="#FFA65237"
+                   Grid.Row="4"
+                   VerticalAlignment="Center"/>
+
+        <TextBlock Text="Пол"
+                   HorizontalAlignment="Right"
+                   Margin="0 0 10 0"
+                   FontSize="10"
+                   FontFamily="Helvetica"
+                   FontStyle="Normal"
+                   FontWeight="Normal"
+                   FontStretch="Normal"
+                   Foreground="#FFA65237"
+                   Grid.Row="5"
+                   VerticalAlignment="Center"/>
+
+        <TextBlock Text="Адрес"
+                   HorizontalAlignment="Right"
+                   Margin="0 0 10 0"
+                   FontSize="10"
+                   FontFamily="Helvetica"
+                   FontStyle="Normal"
+                   FontWeight="Normal"
+                   FontStretch="Normal"
+                   Foreground="#FFA65237"
+                   Grid.Row="6"
+                   VerticalAlignment="Center"/>
+
+
+
+        <TextBox x:Name="lastnameField"
+                 HorizontalAlignment="Left"
+                 Margin="10 0 0 0"
+                 Width="150"
+                 FontStyle="Normal"
+                 FontWeight="Normal"
+                 FontStretch="Normal"
+                 Foreground="#0f1419"
+                 VerticalContentAlignment="Center"
+                 Grid.Column="1"
+                 Grid.Row="1"
+                 Height="30" />
+
+        <TextBox x:Name="nameField"
+                 HorizontalAlignment="Left"
+                 Margin="10 0 0 0"
+                 Width="150"
+                 FontStyle="Normal"
+                 FontWeight="Normal"
+                 FontStretch="Normal"
+                 VerticalContentAlignment="Center"
+                 Grid.Column="1"
+                 Grid.Row="2"
+                 Height="30"/>
+
+        <TextBox x:Name="numberField"
+                 HorizontalAlignment="Left"
+                 Margin="10 0 0 0"
+                 Width="150"
+                 FontStyle="Normal"
+                 FontWeight="Normal"
+                 FontStretch="Normal"
+                 VerticalContentAlignment="Center"
+                 Grid.Column="1"
+                 Grid.Row="3"
+                 Height="30"/>
+
+        <TextBox x:Name="emailField"
+                 HorizontalAlignment="Left"
+                 Margin="10 0 0 0"
+                 Width="150"
+                 FontStyle="Normal"
+                 FontWeight="Normal"
+                 FontStretch="Normal"
+                 VerticalContentAlignment="Center"
+                 Grid.Column="1"
+                 Grid.Row="4"
+                 Height="30"/>
+
+
+        <ComboBox x:Name="genderBox"
+                 HorizontalAlignment="Left"
+                 Margin="10 0 0 0"
+                 Width="150"
+                 FontStyle="Normal"
+                 FontWeight="Normal"
+                 FontStretch="Normal"
+                 VerticalContentAlignment="Center"
+                 Grid.Column="1"
+                 Grid.Row="5"
+                 Height="30"/>
+
+        <TextBox x:Name="addressField" 
+                 HorizontalAlignment="Left"
+                 Margin="10 0 0 0"
+                 Width="150"
+                 FontStyle="Normal"
+                 FontWeight="Normal"
+                 FontStretch="Normal"
+                 VerticalContentAlignment="Center"
+                 Grid.Column="1"
+                 Grid.Row="6"
+                 Height="30"/>
+
+        <Button  x:Name="ChangeReader"
+                 Content="Изменить"
+                 FontSize="20" VerticalContentAlignment="Top"
+                 Width="120" Height="30"
+                 Grid.ColumnSpan="2" Grid.Row="7" Grid.RowSpan="2"
+                 Foreground="#ffffff"
+                 Click="ChangeReader_Click" Background="#FFA65237" BorderBrush="White"/>
+
+        <Button  x:Name="DeterminatePhoto" 
+                 Content="Выбрать изображение" FontSize="11"
+                 VerticalAlignment="Top" HorizontalAlignment="Right"
+                 Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Margin="10"
+                 Width="120" Height="30"
+                 Foreground="#ffffff" Background="#FFA65237" BorderBrush="White"
+                 Click="DeterminatePhoto_Click"/>
+
+
+    </Grid>
+</Window>

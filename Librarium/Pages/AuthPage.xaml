@@ -1,0 +1,70 @@
+﻿<Page x:Class="Librarium.Pages.AuthPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Librarium.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1000" d:DesignWidth="772"
+      Title="AuthPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.6*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.ColumnSpan="4" Background="#FF3F080B"/>
+        <TextBlock Grid.ColumnSpan="4" Text="Авторизация" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="44" Margin="0,0,10,0" Foreground="#FFA65237"/>
+        <Border Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="600" Height="720" Background="#FF3D1618" Opacity="0.85">
+
+        </Border>
+
+        <Border Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="600" Height="720">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="15*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="1" Grid.ColumnSpan="3" Text="Управление библиотекой" FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White"/>
+
+                <TextBox x:Name="loginField" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Width="320" Height="55" BorderBrush="Black" Background="#FF863B3F" BorderThickness="2" Foreground="White" Opacity="0.9" Text="Логин" 
+                         VerticalContentAlignment="Center" FontSize="30"/>
+
+                <TextBox x:Name="passwordField" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="320" Height="55" BorderBrush="Black" Background="#FF863B3F" BorderThickness="2" Foreground="White" Opacity="0.9" Text="Пароль"
+                         VerticalContentAlignment="Center" FontSize="30"/>
+
+                <Image Grid.Row="3" Grid.Column="1" Source="../ImagesResourses/icon-user.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="55"/>
+
+                <Button x:Name="btnLogin" Grid.Row="7" Grid.Column="1" FontSize="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"
+                    Content=" Войти" BorderBrush="LightGray" Background="#FF863B3F" BorderThickness="2" Foreground="White"
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom" FontWeight="Light"
+                    Margin="0 0 0 0" Width="160" Height="55" Click="ButtonLogin_Click"/>
+
+                <TextBlock Text="Забыли пароль?" Grid.Row="9" Grid.Column="1"
+                       HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                       Margin="0 0 0 10" FontSize="12" Foreground="#FFA65237"/>
+
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
